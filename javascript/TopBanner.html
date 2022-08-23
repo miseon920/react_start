@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TopBanner</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .TopBanner {
+        background: #ddd;
+        overflow: hidden;
+        height: 75px;
+        transition: 0.5s all;
+      }
+      .TopBanner.on {
+        height: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="TopBanner">
+      <h2>Lorem ipsum dolor sit.</h2>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates
+        possimus ea mollitia unde quas?
+        <br />
+        Eligendi, non perferendis. Unde, veniam consequuntur.
+        <a href="">more</a>
+      </p>
+    </div>
+    <button>닫기</button>
+
+    <script>
+      document.querySelector("button").addEventListener("click", function () {
+        document.querySelector(".TopBanner").classList.toggle("on");
+        if (!document.querySelector(".TopBanner").classList.contains("on")) {
+          document.querySelector("button").innerText = "닫기";
+        } else {
+          document.querySelector("button").innerText = "열기";
+        }
+      });
+    </script>
+  </body>
+</html>

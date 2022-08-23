@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.TopBanner {
+  background: #ddd;
+  overflow: hidden;
+  height: 100px;
+  transition: 0.5s all;
+}
+.TopBanner.on {
+  height: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 30px;
+  color: red;
+}
+.btn.on {
+  transform: rotate(0.5turn);
+}
