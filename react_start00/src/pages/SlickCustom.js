@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 
 /**
  *
- * @returns 두개합침
+ *
  */
 const SlickCustom = () => {
   const SlideEle = [
@@ -35,6 +35,7 @@ const SlickCustom = () => {
   }, []); //[]은 의존성배열 / 안쓰면 업데이트할떄마다 계속진행하므로 [변수]를 쓰면 변수가 바뀔때마다 실행함
   const set = {
     arrows: false,
+    autoplay: true,
     afterChange: (idx) => {
       //인덱스 받아오기! / 리액트는 매개변수가 하나임
       //console.log(idx); 값이 바뀔때마다 받아와야하므로 state
@@ -53,9 +54,15 @@ const SlickCustom = () => {
         {SlideEle.map((item, idx) => (
           <figure
             key={item.id}
-            className={`item0${idx + 1} ${idx == num ? "on" : ""}`}
+            className={`item item0${idx + 1} ${idx == num ? "on" : ""}`}
           >
             {item.id}
+            <div className="slogan">
+              <h2>{item.h2}</h2>
+              <p>{item.p}</p>
+              <a href="#!">more</a>
+            </div>
+            {/* <Link to=></Link> */}
           </figure>
           //key={item.id} 은 map의 매개변수인 idx로 쓸수 있으나 성능저하 및 데이터의 문제가 있으므로 배열의 id로 준다
         ))}
