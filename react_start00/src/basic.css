@@ -25,3 +25,11 @@
 .btn.on {
   transform: rotate(0.5turn);
 }
+
+.slick_s figure.on {
+  background: red;
+}
+
+.slideDot li.on a {
+  color: red;
+}
